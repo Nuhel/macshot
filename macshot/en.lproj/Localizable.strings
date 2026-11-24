@@ -230,7 +230,7 @@
 "Disable shadow outside selection" = "Disable shadow outside selection";
 "Use window title in saved filename" = "Use window title in saved filename";
 "Hide menu bar icon" = "Hide menu bar icon";
-"Hotkeys still work. To show the icon again, re-launch macshot." = "Hotkeys still work. To show the icon again, re-launch macshot.";
+"Hotkeys still work. Re-launch macshot to open Settings, then untick this to show the icon again." = "Hotkeys still work. Re-launch macshot to open Settings, then untick this to show the icon again.";
 "Check for updates automatically" = "Check for updates automatically";
 "Check for beta updates" = "Check for beta updates";
 "Thumbnail" = "Thumbnail";

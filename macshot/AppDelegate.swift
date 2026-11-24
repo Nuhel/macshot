@@ -508,11 +508,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, SPUUpdaterDelegate {
     }
 
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
-        // Re-launching macshot while it's running: show the menu bar icon
-        if UserDefaults.standard.bool(forKey: "hideMenuBarIcon") {
-            UserDefaults.standard.set(false, forKey: "hideMenuBarIcon")
-            setMenuBarIconVisible(true)
-        }
+        // Re-launching macshot while it's running opens Settings. The
+        // "Hide menu bar icon" preference is left alone so it persists;
+        // the user can untick it in Settings to bring the icon back.
         // Only open settings if no windows are visible (e.g. pure menu-bar state).
         // If editor/video editor is already open, just bring the app to the front.
         if !flag {
@@ -1829,10 +1827,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, SPUUpdaterDelegate {
 
 
     @objc private func handleShowAndOpenPrefs() {
-        if UserDefaults.standard.bool(forKey: "hideMenuBarIcon") {
-            UserDefaults.standard.set(false, forKey: "hideMenuBarIcon")
-            setMenuBarIconVisible(true)
-        }
+        // Keep the "Hide menu bar icon" preference intact; just open Settings.
         openSettings()
     }
 

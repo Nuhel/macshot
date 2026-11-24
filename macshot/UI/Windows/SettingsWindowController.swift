@@ -451,7 +451,7 @@ class SettingsWindowController: NSWindowController, NSToolbarDelegate, NSWindowD
         stack.addArrangedSubview(indented(hideMenuBarIconCheckbox))
         stack.setCustomSpacing(4, after: stack.arrangedSubviews.last!)
 
-        let hideNote = NSTextField(wrappingLabelWithString: L("Hotkeys still work. To show the icon again, re-launch macshot."))
+        let hideNote = NSTextField(wrappingLabelWithString: L("Hotkeys still work. Re-launch macshot to open Settings, then untick this to show the icon again."))
         hideNote.font = NSFont.systemFont(ofSize: 10)
         hideNote.textColor = .secondaryLabelColor
         stack.addArrangedSubview(indented(hideNote))
